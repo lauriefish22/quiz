@@ -1,0 +1,53 @@
+body {
+    background-color:darkcyan;
+}
+main {
+    padding: 5%;
+    margin: 5%;
+    display: flex;
+}
+
+
+.quiz-box {
+    height: 40vh;
+    width: 50vw;
+    border-style: solid;
+    border-color: black;
+    margin: auto;
+}
+
+.question-1 {
+    color: white;
+    text-align: center;
+    font-size: 34px;
+}
+
+.answer-1 {
+    color: white;
+    margin-left: 20px;
+    font-size: 24px;
+    margin-top: 40px;
+    list-style-type: none;
+}
+.timer-box {
+    height: 10vh;
+    width: 20vh;
+    border-style: solid;
+    border-color: black;
+    
+
+}
+h3 {
+    color: black;
+    font-size: 16px;
+    margin-left: 50px;
+    
+    
+}
+
+p {
+    font-size: 14px;
+    color: red;
+    margin-left: 40px;
+    
+}
