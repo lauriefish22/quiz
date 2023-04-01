@@ -1,0 +1,23 @@
+body {
+    background-color: lightseagreen;
+}
+.intro {
+    width: 40vw;
+    height: 30vh;
+    border-style: solid;
+    border-color: black;
+    text-align: center;    
+    margin: 300px;
+    
+}
+.start-button {
+    background-color: red;
+    height: 5vh;
+    width: 10vw;
+    color: black;
+    padding:10px;    
+}
+.container-1 {
+    margin: 5px;
+    padding: 5px;
+}
