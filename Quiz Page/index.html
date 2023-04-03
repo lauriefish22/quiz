@@ -9,13 +9,11 @@
 </head>
 <body>
     <div id="intro">
-        
         <h1>Here is the quiz</h1>
         <p>Here are the instructions</p>
         <button id="start-button">Start</button>
     </div>
 <main class="container-1" id="quiz">
-    
     <div class="container-2" id="container-2"> 
         <div id="high-scores">
             <h1>View High Scores</h1>
@@ -25,8 +23,6 @@
             <div id="timer">60</div>
         </div>
         <div class="time-line"></div>
-        
-        
         <div class="quiz-box">
             <h2 id="question">Question Text</h2>
             <ul>
@@ -46,21 +42,31 @@
                     <input type="radio" name="answer" class="answer" id="answer-4" value="d">
                     <label for="answer-4" id="answer-4-text">Answer</label>
                 </li>
-                
+            </ul>   
                 <button id="enter">Enter</button>
             </div>
-                <!-- <div class="small-boxes"> -->
-                    
-                <!-- </div> -->
-            
+        </div>
     </div>
-</div>
-                
-    
-        
-
-
-    </main>
+        <div id="final-scores-container">
+        <div id="final-scores">
+            <h1 id="top-scores"></h1>
+            <h2>Here are the winners!</h2>
+            <ol> 
+                <li></li>
+                <li></li>
+            </ol>
+                <button id="try-again">Try Again!</button>
+        </div>
+        </div>          
+        <div id="finished-box-container">
+        <div id="finished-box">
+            <h1 id="final-score"></h1>
+            <h2>Great Job! Enter your initials below</h2>
+            <input type="text" id="input-initials" />
+            <button id="initials-button"> Submit</button>
+        </div>
+        </div>
+</main>
     <script src="./script.js"></script>
 </body>
 </html>

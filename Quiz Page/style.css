@@ -4,45 +4,42 @@
 
 body {
     background-color:darkcyan;
+    background-color: cover;
 }
 main {
-    
-    padding: 0 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 60vh;
+    padding: 0 30px;
 }
-
 #container-2 {
-background-color: white;
-border-radius: 20px;
-display: none;
-align-items: center;
-justify-content: left;
-margin: auto;
-max-width: 80%;
-text-align: justify;
-position: relative;
+    display: none;
+    background-color: white;
+    color: darkblue;
+    max-width: 80%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: justify;
+    position: absolute;
+    top:10%;
+    left: 30%;
+    box-shadow: black 0 6px 8px;
+    flex-basis: auto;
 }
-
 h2 {
     padding: 5%;
     margin: 0;
-    
 }
 h3 {
     font-size: 20px;
 }
-
 .quiz-box {
     padding: 5px 10px;
     max-width: 60%;
     margin-left: 30px;
 }
-    
-
-
 .answer-1 {
     color: white;
     margin-left: 20px;
@@ -50,11 +47,6 @@ h3 {
     margin-top: 40px;
     list-style-type: none;
 }
-
-
-
-
-    
 #question {
     color: blue;
     padding: 1rem;
@@ -71,10 +63,8 @@ li {
 h1 {
     color: black;
     font-size: 22px;
-    
     padding-bottom: 3px;
 }
-
 #enter {
     height: 30px;
     width: 220px;
@@ -84,7 +74,6 @@ h1 {
     font-size: 22px;
     text-align: center;
 }
-
 #start-button {
     background-color: red;
     height: 5vh;
@@ -95,11 +84,19 @@ h1 {
 #intro {
     width: 40vw;
     height: 30vh;
-    border-style: solid;
-    border-color: black;
-    text-align: center;    
-    margin: 300px;
-    visibility: visible;
+    /* visibility: visible; */
+    display: none;
+    background-color: white;
+    color: darkblue;
+    max-width: 70%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 20px;
+    text-align:center;
+    position: absolute;
+    top:10%;
+    left: 30%;
+    flex-basis: auto;
 }
 #high-scores {
     width: 15vw;
@@ -112,7 +109,6 @@ h1 {
     text-align: center;
 }
 #timer-box {
-    
     color: #004085;
     background-color: darkorange;
     border: 1px solid #b8daff;
@@ -126,32 +122,90 @@ h1 {
     margin-left: 650px;
     position: absolute;
     margin-top: -320px;
-    
 }
 #timer {
     font-weight: 400;
     font-size: 17px;
     user-select: none;
 }
-
 #time-line {
     position: absolute;
     bottom: 0px;
     left: 0px;
     height: 3px;
     background: #007bff;
-    
 }
 
+#finished-box-container {
+    display: none;
+    width: 40vw;
+    height: 30vh;
+    margin: auto;
+    padding: 10px;
+    border-radius: 20px;
+    text-align:center;
+    position: absolute;
+    top:10%;
+    left: 30%;
+    flex-basis: auto;
+    border-style: solid;
+    border-color: black;
+}
 
-
-
-/*.small-boxes {
-
-    height: 45px;
+#finished-box {
+    width: 80%;
+    margin-left: 60px;
     display: flex;
-    margin: 5px;
-   flex-wrap: wrap;
-    padding: 0px 30px;
-    justify-content: flex-end;
-}*/
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    
+    
+}
+#input-initials{ 
+    height: 5vh;
+    width: 10vw;
+    color: black;
+    padding: 10px; 
+    margin: 5px;  
+    margin-top: 40px;
+}
+#initials-button {
+    font-size: 18px;
+    height: 5vh;
+    width: 8vw;
+    background-color:crimson;
+    border-radius: 20%;
+    color: black;
+    padding: 10px; 
+    margin: 5px;  
+    margin-top: 40px;
+}
+#final-scores-container {
+    width: 40vw;
+    height: 40vh;
+    margin: auto;
+    padding: 10px;
+    border-radius: 20px;
+    text-align:center;
+    position: absolute;
+    top:10%;
+    left: 30%;
+    flex-basis: auto;
+    border-style: solid;
+    border-color: black;
+}
+#try-again {
+    font-size: 18px;
+    height: 5vh;
+    width: 8vw;
+    background-color:crimson;
+    border-radius: 20%;
+    color: black;
+    padding: 10px; 
+    margin-top: 65px;
+
+}
+#final-scores h2 {
+    font-size:42px;
+}
