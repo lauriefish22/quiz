@@ -20,7 +20,7 @@ const allQuestions = [
             a: "Construct",
             b: "Copy",
             c: "Create", 
-            d: "cut",
+            d: "Cut",
             answer: "c"
     },
     {
@@ -74,7 +74,6 @@ function getAnswer() {
     for(var i = 0; i < checkAnswer.length; i++) {
         if(checkAnswer[i].checked) {
             answer = checkAnswer[i].value;
-            console.log(answer);
             if(answer == allQuestions[quizStart].answer) {
                 quizStart++;
                 score++;
@@ -82,7 +81,6 @@ function getAnswer() {
                 quizStart++;
                 alert ("wrong");
             }
-        
         } 
     }
     clearAnswers();
@@ -96,6 +94,4 @@ function clearAnswers() {
     for(var i = 0; i < checkAnswer.length; i++) {
         checkAnswer[i].checked = false;
     }
-        
-    
 }
