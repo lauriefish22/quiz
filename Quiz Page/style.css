@@ -15,14 +15,16 @@ main {
     
 
 }
-.container-2 {
+#container-2 {
 background-color: white;
 border-radius: 20px;
-display: flex;
+display: none;
 align-items: center;
 justify-content: center;
 margin: 0;
 width: 850px;
+
+
 }
 
 .quiz-box {
@@ -69,4 +71,21 @@ h3 {
     padding: 5%;
     margin: 0;
     text-align: center;
+}
+
+#start-button {
+    background-color: red;
+    height: 5vh;
+    width: 10vw;
+    color: black;
+    padding: 10px;   
+}
+#intro {
+    width: 40vw;
+    height: 30vh;
+    border-style: solid;
+    border-color: black;
+    text-align: center;    
+    margin: 300px;
+    visibility: visible;
 }
