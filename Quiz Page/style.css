@@ -113,15 +113,35 @@ h1 {
 }
 .timer-box {
     
-    padding: 5px;
-    margin-left: 700px;
-    margin-bottom: 300px;
-    position:absolute;
-    justify-content: center;
+    color: #004085;
+    background-color: darkorange;
+    border: 1px solid #b8daff;
+    height: 55px;
+    padding: 0 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px;
+    margin-left: 650px;
+    position: absolute;
+    margin-top: -320px;
+    
+}
+.timer {
+    font-weight: 400;
+    font-size: 17px;
+    user-select: none;
 }
 
-
-
+.time-line {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 3px;
+    background: #007bff;
+    
+}
 
 
 

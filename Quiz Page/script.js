@@ -7,8 +7,10 @@ const answer3 = document.getElementById("answer-3-text");
 const answer4 = document.getElementById("answer-4-text");
 const enterButton = document.getElementById("enter");
 const startButton = document.getElementById("start-button")
+const secCount = document.getElementById("timer")
 
 startButton.addEventListener("click", startQuiz); 
+
 enterButton.addEventListener("click", getAnswer);
     
 
@@ -54,8 +56,11 @@ const allQuestions = [
 ];
 let quizStart = 0;
 let score = 0;
+let counter;
+let timeValue = 60;
 
 function startQuiz () {
+    
     const quizStartData = allQuestions[quizStart];
     const seeQuiz = document.getElementById("container-2");
     const noIntro = document.getElementById("intro");
@@ -66,7 +71,7 @@ function startQuiz () {
     answer2.innerText = quizStartData.b
     answer3.innerText = quizStartData.c
     answer4.innerText = quizStartData.d
-
+    
 }
 function getAnswer() {
     var answer = "";
@@ -85,6 +90,7 @@ function getAnswer() {
     }
     clearAnswers();
     startQuiz();
+    
 }
 
 
@@ -94,4 +100,14 @@ function clearAnswers() {
     for(var i = 0; i < checkAnswer.length; i++) {
         checkAnswer[i].checked = false;
     }
+}
+
+function startTimer(time){
+    counter = setInterval(timer, 1000);
+
+function timer () {
+    secCount.textContent = time;
+    time--;
+    }
+    
 }
