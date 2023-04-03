@@ -77,11 +77,25 @@ function getAnswer() {
             console.log(answer);
             if(answer == allQuestions[quizStart].answer) {
                 quizStart++;
-                return score++
+                score++;
             } else {
                 quizStart++;
                 alert ("wrong");
             }
+        
         } 
     }
+    clearAnswers();
+    startQuiz();
+}
+
+
+
+function clearAnswers() {
+    const checkAnswer = document.getElementsByClassName("answer");
+    for(var i = 0; i < checkAnswer.length; i++) {
+        checkAnswer[i].checked = false;
+    }
+        
+    
 }
