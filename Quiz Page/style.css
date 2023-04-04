@@ -22,7 +22,7 @@ main {
     padding: 10px;
     border-radius: 20px;
     text-align: justify;
-    position: absolute;
+    
     top:10%;
     left: 30%;
     box-shadow: black 0 6px 8px;
@@ -119,22 +119,20 @@ h1 {
     align-items: center;
     justify-content: space-between;
     width: 145px;
-    margin-left: 650px;
-    position: absolute;
-    margin-top: -320px;
+    
 }
 #timer {
     font-weight: 400;
     font-size: 17px;
     user-select: none;
 }
-#time-line {
-    position: absolute;
+/*#time-line {
+    
     bottom: 0px;
     left: 0px;
     height: 3px;
     background: #007bff;
-}
+}*/
 
 #finished-box-container {
     /* display: none; */
@@ -195,19 +193,9 @@ h1 {
     flex-basis: auto;
     border-style: solid;
     border-color: black;
-    display: none;
+    visibility: hidden;
 }
-#try-again {
-    font-size: 18px;
-    height: 5vh;
-    width: 8vw;
-    background-color:crimson;
-    border-radius: 20%;
-    color: black;
-    padding: 10px; 
-    margin-top: 65px;
 
-}
 #final-scores h2 {
     font-size:42px;
 }

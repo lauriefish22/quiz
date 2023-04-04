@@ -10,12 +10,13 @@ const startButton = document.getElementById("start-button");
 const scoreButton = document.getElementById("view-high-scores");
 var inputInitials = document.getElementById("input-initials");
 var initialsButton = document.getElementById("initials-button");
-var secCount = 60
-var timer = document.getElementById("timer");
+var secCount = 60;
+var timerEl = document.getElementById("timer");
 var timerId;
 var totalScore = document.getElementById("final-score");
 const seeQuiz = document.getElementById("container-2");
 var finishedBox = document.getElementById("finished-box-container");
+var finalBox = document.getElementById("final-scores-container")
 
 finishedBox.style.visibility = "hidden";
 
@@ -82,11 +83,12 @@ function startQuiz () {
     const noIntro = document.getElementById("intro");
     noIntro.style.visibility = "hidden";
     seeQuiz.style.display = "flex";
-    questionEl.innerText = quizStartData.question
-    answer1.innerText = quizStartData.a
-    answer2.innerText = quizStartData.b
-    answer3.innerText = quizStartData.c
-    answer4.innerText = quizStartData.d
+    questionEl.innerText = quizStartData.question;
+    answer1.innerText = quizStartData.a;
+    answer2.innerText = quizStartData.b;
+    answer3.innerText = quizStartData.c;
+    answer4.innerText = quizStartData.d;
+    startTimer();
 }
 function getAnswer() {
     var answer = "";
@@ -99,7 +101,9 @@ function getAnswer() {
                 score++;
             } else {
                 quizStart++;
+                secCount -= 15;
                 alert ("wrong");
+                
             }
             totalScore.innerHTML = "Your score is " + score;
         } 
@@ -127,30 +131,33 @@ function clearAnswers() {
 }
 
 
-/*function startTimer(time){
+function startTimer(){
     counter = setInterval(timer, 1000);
-
-function timer () {
-    secCount.textContent = time;
-    time--;
+    function timer () {
+        secCount--;
+        timerEl.innerText = "" + secCount;
+        if(secCount == 0) {
+            clearInterval(counter);
+            clearAnswers();
+        }
     }
-    function timer() {
-    secCount--;
-    timer.textContent = secCount;
-    
-}*/
+}
  function inputScore () {
     initialsButton.addEventListener("click", displayFinalScore);
  }
  function displayFinalScore () {
-    localStorage.setIem(inputInitials.value, score);
+    localStorage.setItem(inputInitials.value, score);
     
     var listEl = document.getElementById("list");
     for(var i = 0; i < localStorage.length; i++) {
         var newListItem = document.createElement("li");
-        localStorage.key(i);
-        listEl.innerHTML = ""+localStorage.key(i) + " " +localStorage.getItem(localStorage.key(i));
+        
+        newListItem.innerText = ""+localStorage.key(i) + " " +localStorage.getItem(localStorage.key(i));
         listEl.appendChild(newListItem);
+        finishedBox.style.visibility = "hidden";
+        finalBox.style.visibility = "visible";
+
+
         
 
     }
