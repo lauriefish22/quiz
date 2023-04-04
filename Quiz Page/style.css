@@ -84,8 +84,8 @@ h1 {
 #intro {
     width: 40vw;
     height: 30vh;
-    /* visibility: visible; */
-    display: none;
+    visibility: visible; 
+    /* display: none; */
     background-color: white;
     color: darkblue;
     max-width: 70%;
@@ -98,7 +98,7 @@ h1 {
     left: 30%;
     flex-basis: auto;
 }
-#high-scores {
+#view-high-scores {
     width: 15vw;
     height: 8vh;
     border-style: solid;
@@ -137,9 +137,10 @@ h1 {
 }
 
 #finished-box-container {
-    display: none;
-    width: 40vw;
-    height: 30vh;
+    /* display: none; */
+    visibility: visible;
+    width: 50vw;
+    height: 40vh;
     margin: auto;
     padding: 10px;
     border-radius: 20px;
@@ -194,6 +195,7 @@ h1 {
     flex-basis: auto;
     border-style: solid;
     border-color: black;
+    display: none;
 }
 #try-again {
     font-size: 18px;
