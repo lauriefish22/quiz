@@ -22,7 +22,7 @@ finishedBox.style.visibility = "hidden";
 
 
 startButton.addEventListener("click", startQuiz); 
-// scoreButton.addEventListener("click", )
+scoreButton.addEventListener("click", displayFinalScore);
 enterButton.addEventListener("click", getAnswer);
     
 
@@ -70,7 +70,7 @@ let quizStart = 0;
 let score = 0;
 let counter;
 
-// function displayScore () {
+
 
 
 
@@ -119,10 +119,6 @@ function getAnswer() {
         
 }
 
-
-    
-
-
 function clearAnswers() {
     const checkAnswer = document.getElementsByClassName("answer");
     for(var i = 0; i < checkAnswer.length; i++) {
@@ -142,10 +138,10 @@ function startTimer(){
         }
     }
 }
- function inputScore () {
+function inputScore () {
     initialsButton.addEventListener("click", displayFinalScore);
- }
- function displayFinalScore () {
+}
+function displayFinalScore () {
     localStorage.setItem(inputInitials.value, score);
     
     var listEl = document.getElementById("list");
@@ -156,9 +152,6 @@ function startTimer(){
         listEl.appendChild(newListItem);
         finishedBox.style.visibility = "hidden";
         finalBox.style.visibility = "visible";
-
-
-        
-
+        seeQuiz.style.visibility = "hidden";
     }
- }    
+}    
